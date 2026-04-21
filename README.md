@@ -1,0 +1,2 @@
+# OpenBounty
+Decentralized bounty platform
