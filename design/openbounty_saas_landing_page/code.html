@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OpenBounty | The Digital Archive of Open Source</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#1a4d5a",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "on-surface-variant": "#50453b",
+                    "on-secondary-container": "#726040",
+                    "on-primary-fixed-variant": "#633f1a",
+                    "secondary-fixed-dim": "#dbc39c",
+                    "on-tertiary-container": "#f9fdff",
+                    "outline-variant": "#d4c3b7",
+                    "secondary-fixed": "#f8dfb7",
+                    "on-secondary-fixed": "#261a02",
+                    "background": "#fcf9f4",
+                    "inverse-on-surface": "#f3f0eb",
+                    "primary-fixed": "#ffdcc0",
+                    "surface-bright": "#fcf9f4",
+                    "secondary": "#6e5c3c",
+                    "inverse-primary": "#f1bc8d",
+                    "primary": "#7b532d",
+                    "primary-fixed-dim": "#f1bc8d",
+                    "tertiary-container": "#4c7b8a",
+                    "on-primary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#9ecede",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#31302d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fcf9f4",
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary": "#326270",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#2d1600",
+                    "on-surface": "#1c1c19",
+                    "on-tertiary-fixed": "#001f27",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#f0ede9",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#f5ddb4",
+                    "surface-tint": "#7e562f",
+                    "surface-dim": "#dcdad5",
+                    "surface-variant": "#e5e2dd",
+                    "primary-container": "#976b43",
+                    "outline": "#82756a",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#baeafb",
+                    "surface-container-low": "#f6f3ee",
+                    "on-secondary-fixed-variant": "#544426"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f4;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-[#fcf9f4] dark:bg-stone-950 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto font-manrope tracking-tight text-stone-900 dark:text-stone-100">
+<div class="text-xl font-bold text-[#7b532d] dark:text-[#ac7e54]">OpenBounty</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">Bounties</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">How it Works</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">Trust</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">Docs</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#50453b] dark:text-stone-400 font-medium px-4 py-2 hover:text-[#7b532d] scale-95 active:scale-90 transition-transform">Sign In</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold scale-95 active:scale-90 transition-transform shadow-sm">Get Started</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-16 items-center">
+<div class="text-left space-y-8">
+<h1 class="text-6xl font-extrabold tracking-tight text-on-background leading-[1.1]">
+                    Get Paid for Fixing <br/> <span class="text-primary">Open Source Issues</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    The bridge between ambitious developers and the world's most critical open-source infrastructure. Solve problems, earn bounties, build your legacy.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#ac7e54] text-white px-8 py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-[#ac7e54]/20">Create Bounty</button>
+<button class="border-2 border-outline-variant text-on-background px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-container-low transition-all">View Bounties</button>
+</div>
+</div>
+<div class="relative">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-8 shadow-xl shadow-primary/5">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-background">facebook/react</p>
+<p class="text-xs text-on-surface-variant">Issue #28491</p>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                            Active
+                        </div>
+</div>
+<h3 class="text-2xl font-bold text-on-background mb-4">Fix memory leak in concurrent rendering mode</h3>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">label</span>
+<span class="text-sm">Bug</span>
+<span class="text-sm">•</span>
+<span class="text-sm">High Priority</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+<div class="flex items-end justify-between border-t border-outline-variant/10 pt-6">
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest mb-1">Current Bounty</p>
+<p class="text-4xl font-extrabold text-[#ac7e54]">$2,450.00</p>
+</div>
+<button class="bg-primary text-white p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Decorative archival accent -->
+<div class="absolute -z-10 -bottom-4 -right-4 w-full h-full border border-outline-variant/30 rounded-xl"></div>
+</div>
+</section>
+<!-- Bounty List -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-12">
+<h2 class="text-3xl font-extrabold text-on-background tracking-tight">Active Bounties</h2>
+<a class="text-primary font-bold hover:underline underline-offset-4" href="#">Browse All Bounties</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Bounty Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<p class="text-sm font-semibold text-on-surface-variant">tailwindlabs/tailwindcss</p>
+<span class="text-[#ac7e54] font-extrabold text-lg">$850</span>
+</div>
+<h4 class="text-lg font-bold text-on-background mb-4 line-clamp-2">Optimize JIT compiler performance for large enterprise projects</h4>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Performance</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Rust</span>
+</div>
+</div>
+<!-- Bounty Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<p class="text-sm font-semibold text-on-surface-variant">vercel/next.js</p>
+<span class="text-[#ac7e54] font-extrabold text-lg">$1,200</span>
+</div>
+<h4 class="text-lg font-bold text-on-background mb-4 line-clamp-2">Implement native support for WebAssembly streaming instantiation</h4>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Feature</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Wasm</span>
+</div>
+</div>
+<!-- Bounty Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<p class="text-sm font-semibold text-on-surface-variant">microsoft/vscode</p>
+<span class="text-[#ac7e54] font-extrabold text-lg">$450</span>
+</div>
+<h4 class="text-lg font-bold text-on-background mb-4 line-clamp-2">Fix indentation bug in YAML files with nested anchors</h4>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Bug</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold uppercase">Editor</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-extrabold text-on-background tracking-tight mb-4">How It Works</h2>
+<div class="w-12 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<div class="text-7xl font-extrabold text-surface-container-high leading-none">1</div>
+<h3 class="text-xl font-bold text-on-background">Connect GitHub</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Link your GitHub account securely to track your contributions and verify completed pull requests automatically.
+                    </p>
+</div>
+<div class="space-y-6">
+<div class="text-7xl font-extrabold text-surface-container-high leading-none">2</div>
+<h3 class="text-xl font-bold text-on-background">Solve Issues</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Claim open bounties from top repositories. Once your PR is merged, the bounty is automatically triggered.
+                    </p>
+</div>
+<div class="space-y-6">
+<div class="text-7xl font-extrabold text-surface-container-high leading-none">3</div>
+<h3 class="text-xl font-bold text-on-background">Get Paid</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Receive your rewards directly into your wallet. No invoices, no waiting periods, just instant settlements.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-[#fcf9f4] py-24 border-y border-outline-variant/10">
+<div class="max-w-3xl mx-auto px-8 text-center space-y-8">
+<div class="inline-flex items-center justify-center p-4 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-3xl text-primary" data-weight="fill">verified_user</span>
+</div>
+<h2 class="text-3xl font-extrabold text-on-background tracking-tight">Security in Every Line of Code</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                    OpenBounty utilizes industry-standard smart contract escrow protocols. When a bounty is created, funds are locked in a secure, audited contract. They are only released once the repository maintainers verify and merge your solution. Your earnings are guaranteed by the blockchain, not by bureaucracy.
+                </p>
+<div class="pt-4 flex justify-center gap-12 grayscale opacity-50">
+<span class="material-symbols-outlined text-4xl">shield</span>
+<span class="material-symbols-outlined text-4xl">lock</span>
+<span class="material-symbols-outlined text-4xl">account_balance_wallet</span>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-7xl mx-auto px-8 py-32 text-center">
+<div class="bg-surface-container py-20 px-8 rounded-2xl relative overflow-hidden">
+<div class="relative z-10 space-y-8">
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-background tracking-tight">Ready to build the future?</h2>
+<p class="text-lg text-on-surface-variant max-w-xl mx-auto">Join thousands of developers earning while contributing to the software that powers the world.</p>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-bold text-xl hover:scale-105 transition-transform shadow-xl shadow-primary/10">Start Building</button>
+</div>
+<!-- Subtle texture detail -->
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">code</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6f3ee] dark:bg-stone-900 border-t border-outline-variant/5">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-6 font-inter text-sm antialiased">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="font-manrope font-extrabold text-[#7b532d] text-lg">OpenBounty</div>
+<p class="text-[#50453b] dark:text-stone-400">© 2024 OpenBounty. The Digital Archive of Open Source.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Github</a>
+</div>
+</div>
+</footer>
+</body></html>

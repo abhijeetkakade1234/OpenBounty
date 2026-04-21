@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#633f1a",
+                    "secondary-fixed": "#f8dfb7",
+                    "outline-variant": "#d4c3b7",
+                    "tertiary-fixed": "#baeafb",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-on-surface": "#f3f0eb",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#9ecede",
+                    "surface": "#fcf9f4",
+                    "primary-fixed-dim": "#f1bc8d",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#f0ede9",
+                    "surface-bright": "#fcf9f4",
+                    "on-surface-variant": "#50453b",
+                    "outline": "#82756a",
+                    "on-primary-container": "#fffbff",
+                    "secondary-fixed-dim": "#dbc39c",
+                    "secondary-container": "#f5ddb4",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#2d1600",
+                    "on-error-container": "#93000a",
+                    "background": "#fcf9f4",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary-fixed": "#001f27",
+                    "inverse-surface": "#31302d",
+                    "on-secondary-fixed": "#261a02",
+                    "on-tertiary-fixed-variant": "#1a4d5a",
+                    "on-secondary-fixed-variant": "#544426",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed": "#ffdcc0",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#726040",
+                    "primary": "#7b532d",
+                    "on-tertiary-container": "#f9fdff",
+                    "surface-tint": "#7e562f",
+                    "tertiary": "#326270",
+                    "tertiary-container": "#4c7b8a",
+                    "primary-container": "#976b43",
+                    "surface-dim": "#dcdad5",
+                    "on-background": "#1c1c19",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#f1bc8d",
+                    "secondary": "#6e5c3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f4;
+            color: #1c1c19;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-secondary-fixed">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f4] dark:bg-stone-950 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto font-manrope tracking-tight text-stone-900 dark:text-stone-100">
+<div class="flex items-center gap-12">
+<span class="text-xl font-bold text-[#7b532d] dark:text-[#ac7e54]">OpenBounty</span>
+<div class="hidden md:flex gap-8">
+<a class="text-[#7b532d] dark:text-[#ac7e54] font-semibold border-b-2 border-[#7b532d] transition-all duration-300" href="#">Bounties</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">How it Works</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">Trust</a>
+<a class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] dark:hover:text-[#ac7e54] transition-all duration-300" href="#">Docs</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#50453b] dark:text-stone-400 font-medium hover:text-[#7b532d] px-4 py-2 scale-95 active:scale-90 transition-transform">Sign In</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold scale-95 active:scale-90 transition-transform shadow-sm">Get Started</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-8 pt-12 pb-24">
+<!-- Breadcrumb -->
+<nav class="mb-8 flex items-center gap-2 text-on-surface-variant font-label text-sm">
+<span class="material-symbols-outlined text-sm">folder</span>
+<span class="hover:text-primary cursor-pointer transition-colors">tailwindlabs</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary cursor-pointer transition-colors">tailwindcss</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Main Content Area -->
+<div class="lg:col-span-8">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full uppercase tracking-wider">Open</span>
+<span class="text-on-surface-variant text-sm font-medium">Posted 2 days ago</span>
+</div>
+<h1 class="text-5xl font-extrabold font-headline text-on-surface leading-tight tracking-tight mb-6">
+                        Optimize JIT compiler performance for large enterprise projects
+                    </h1>
+</div>
+<!-- Abstract / Metadata -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 p-8 bg-surface-container-low rounded-xl">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Reward</span>
+<span class="text-2xl font-headline font-bold text-primary">$850.00</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-outline-variant/20 md:pl-6">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Est. Time</span>
+<span class="text-2xl font-headline font-bold text-on-surface">12-16 hrs</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-outline-variant/20 md:pl-6">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Difficulty</span>
+<span class="text-2xl font-headline font-bold text-on-surface">Expert</span>
+</div>
+</div>
+<!-- Content Body -->
+<section class="space-y-12">
+<div>
+<h2 class="text-xl font-headline font-bold text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-weight="fill">description</span>
+                            Description
+                        </h2>
+<div class="prose prose-stone max-w-none text-on-surface-variant leading-relaxed space-y-4 font-body">
+<p>Detailed technical requirements for performance optimization in Tailwind's JIT engine. We've observed linear degradation in build times as enterprise projects scale beyond 5,000 components using complex variants.</p>
+<p>The goal is to implement a more aggressive caching strategy and parallelize the scanning of utility classes across multiple CPU threads. Specifically, the candidate should focus on the following areas:</p>
+<ul class="list-disc pl-5 space-y-2">
+<li>Improve the memoization of generated CSS for static class patterns.</li>
+<li>Optimize the AST walking process for React/Next.js large-scale projects.</li>
+<li>Reduce peak memory usage during initial watch-mode scans.</li>
+</ul>
+</div>
+</div>
+<div class="p-8 border border-outline-variant/20 rounded-xl bg-surface-container-lowest">
+<h2 class="text-xl font-headline font-bold text-on-surface mb-6">Technical Environment</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary">code</span>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Primary Language</p>
+<p class="font-bold text-on-surface">Rust / Node.js</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary">rebase</span>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Target Branch</p>
+<p class="font-bold text-on-surface">v4-alpha</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Content Block -->
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<h2 class="text-xl font-headline font-bold text-on-surface mb-4">Acceptance Criteria</h2>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">25% reduction in warm build times for projects &gt; 10k files.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">Zero regression in existing v3 compatibility layer.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-on-surface-variant">Detailed benchmark report included in PR description.</span>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-64 h-48 rounded-2xl overflow-hidden shadow-sm relative group">
+<img alt="Code performance visualization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract visualization of high-performance code on a dark monitor, neon blue and orange data streams, cinematic lighting, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKYJLP4BMBtlYLwPBbysRZfyvGgaUu15UVAvUYgNcTMyvRVxpglFXD09FSUYjAhri-rMdTYd-LtWQCLuODRDepK3rFk4Qu9Rq3q7TBzqPwPzs9svCZ0HmhZkqIKYiobCRT55Zhu9_26iStzFClct-x2YkrMFVRr86VSZp-JU-s3U95uuqTaHVn3QC-ZbdfcX69_Fwm_8KSQ8a1S36qcTfWWv9wr1YcH_gT4RX3lDkF2AmWfzeXe1Gt2iI5uiBcxgzsPFSudjdgqps"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Apply Card -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_12px_32px_rgba(123,83,45,0.08)] sticky top-28">
+<h3 class="text-lg font-headline font-bold mb-6">Project Metadata</h3>
+<div class="space-y-6 mb-8">
+<div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest mb-3 block">Technologies</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-sm font-medium rounded-full">Performance</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-sm font-medium rounded-full">Rust</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-sm font-medium rounded-full">Compiler</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface text-sm font-medium rounded-full">Optimization</span>
+</div>
+</div>
+<div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest mb-3 block">Organization</span>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center p-1 border border-outline-variant/20">
+<img alt="Organization Logo" data-alt="Minimalist geometric bird logo in black and white, clean corporate design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaYFTZyxZJ3dpO9zlwoS5CMd1S6rS8st6UKRH29Wlwu-9KJwnrTIQAzUWN-HUbirNgOTQ6XwxiiopuRbJwic8M_7PePDH1CRJSMxpZJ41apq_UxGmBYDhdAM3YV-l-FpTlR06clrpEaI7AyYf1jyeQqUHMRjpeS9i8GEUs0nW2Ea9geyX-0BrXCMeCEZkPAJxKskFNJ8Y-wMlYESdRoGw0McdQN9a_o2QCf55lIXhMWeRUP_Jg391_bWEWvYQPja24ZL3qe6KNwG4"/>
+</div>
+<div>
+<p class="font-bold text-on-surface leading-none">Tailwind Labs</p>
+<p class="text-xs text-on-surface-variant">Verified Maintainers</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:bg-primary-container transition-colors shadow-lg shadow-primary/20 scale-[0.98] active:scale-[0.95] transition-transform">
+                            Apply to Work
+                        </button>
+<button class="w-full flex items-center justify-center gap-2 border-2 border-outline-variant/20 text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+                            Save for Later
+                        </button>
+</div>
+<p class="mt-6 text-center text-xs text-on-surface-variant">
+                        By applying, you agree to our <a class="underline hover:text-primary" href="#">Guidelines</a> for open-source contributions.
+                    </p>
+</div>
+<!-- Bento Elements for Sidebar -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">groups</span>
+<p class="text-sm font-bold text-on-surface">12</p>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-wider">Applicants</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">visibility</span>
+<p class="text-sm font-bold text-on-surface">1.4k</p>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-wider">Views</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6f3ee] dark:bg-stone-900 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-6 font-inter text-sm antialiased">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-manrope font-extrabold text-[#7b532d]">OpenBounty</span>
+<p class="text-[#50453b] dark:text-stone-400">© 2024 OpenBounty. The Digital Archive of Open Source.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-[#50453b] dark:text-stone-400 hover:text-[#7b532d] underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Github</a>
+</div>
+</div>
+</footer>
+</body></html>
