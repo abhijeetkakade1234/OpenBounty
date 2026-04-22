@@ -1,0 +1,48 @@
+{
+  "name": "openbounty",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "contracts"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "dev": "concurrently -k -n web,contracts -c magenta,cyan \"npm run dev:web\" \"npm run dev:contracts\"",
+    "dev:local": "node scripts/dev-local.cjs",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:contracts": "npm run node -w contracts",
+    "build": "npm run build -w apps/web",
+    "build:web": "npm run build -w apps/web",
+    "lint": "npm run lint -w apps/web && npm run lint -w contracts",
+    "lint:web": "npm run lint -w apps/web",
+    "lint:contracts": "npm run lint -w contracts",
+    "test": "npm run test -w contracts",
+    "test:contracts": "npm run test -w contracts",
+    "compile:contracts": "npm run compile -w contracts",
+    "deploy:local": "npm run deploy:local -w contracts",
+    "deploy:fuji": "npm run deploy:fuji -w contracts",
+    "deploy:mainnet": "npm run deploy:mainnet -w contracts",
+    "fund:local": "node scripts/fund-local.cjs",
+    "upgrade:local": "npm run upgrade:local -w contracts",
+    "upgrade:fuji": "npm run upgrade:fuji -w contracts",
+    "upgrade:mainnet": "npm run upgrade:mainnet -w contracts",
+    "env:use:local": "node scripts/use-env.mjs local",
+    "env:use:fuji": "node scripts/use-env.mjs fuji",
+    "env:use:mainnet": "node scripts/use-env.mjs mainnet",
+    "ci:check": "npm run lint && npm run test:contracts && npm run build"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,json,md,css,yml,yaml}": [
+      "prettier --write"
+    ],
+    "apps/web/src/**/*.{js,jsx,ts,tsx}": [
+      "npm exec --workspace apps/web eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3"
+  }
+}

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcf9f4;
+  --foreground: #1c1c19;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: #fcf9f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3ee;
+  --color-surface-container: #f0ede9;
+  --color-surface-container-high: #ebe8e3;
+  --color-surface-container-highest: #e5e2dd;
+  --color-surface-variant: #e5e2dd;
+  --color-outline-variant: #d4c3b7;
+  --color-outline: #82756a;
+  --color-primary: #7b532d;
+  --color-primary-container: #976b43;
+  --color-primary-fixed: #ffdcc0;
+  --color-secondary: #6e5c3c;
+  --color-secondary-container: #f5ddb4;
+  --color-secondary-fixed-dim: #dbc39c;
+  --color-tertiary: #326270;
+  --color-on-background: #1c1c19;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #50453b;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-container: #726040;
+  --font-sans: var(--font-inter);
+  --font-headline: var(--font-manrope);
+}
+
+@layer base {
+  * {
+    border-color: rgb(212 195 183 / 0.24);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-manrope), sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-8;
+  }
+
+  .editorial-card {
+    @apply rounded-3xl bg-surface-container-lowest ring-1 ring-outline-variant/20;
+  }
+
+  .soft-panel {
+    @apply rounded-3xl bg-surface-container-low px-6 py-6 md:px-8 md:py-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition hover:bg-primary-container disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl bg-secondary-container px-5 py-3 text-sm font-semibold text-on-secondary-container transition hover:brightness-98 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-on-surface transition hover:bg-surface-container-high disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .field-shell {
+    @apply w-full rounded-2xl border border-outline-variant/40 bg-surface-container-lowest px-4 py-3 text-sm text-on-surface outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/20;
+  }
+
+  .field-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-on-surface-variant;
+  }
+
+  .status-pill {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em];
+  }
+}
