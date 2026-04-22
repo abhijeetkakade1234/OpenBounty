@@ -6,7 +6,7 @@
     "contracts"
   ],
   "scripts": {
-    "prepare": "husky",
+    "prepare": "node scripts/prepare.cjs",
     "dev": "concurrently -k -n web,contracts -c magenta,cyan \"npm run dev:web\" \"npm run dev:contracts\"",
     "dev:local": "node scripts/dev-local.cjs",
     "dev:web": "npm run dev -w apps/web",
